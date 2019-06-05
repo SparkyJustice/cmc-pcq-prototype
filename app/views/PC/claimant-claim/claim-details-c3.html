@@ -19,7 +19,7 @@ Money Claims Prototype
     <ol>
       <!--<li><a href="#" onclick="history.go(-1)">All claims</a></li>-->
 
-      <li><a href="all-claims?claimant=5">All claims</a></li>
+      <li><a href="all-claims?claimant=3">All claims</a></li>
 
       <li aria-current="page">Claim details</li>
 
@@ -50,45 +50,29 @@ Money Claims Prototype
         <div id="tabOneContent">
           <div class="column-two-thirds">
             <div class="description" style="background-color: #fff">
-              <div class="status-block" style="margin-top: 20px">
-                  <h4 class=" heading-small">You must pay the hearing fee</h4>
+              <!--Action one-->
+              <h4 class=" heading-small">The court will review your case</h4>
+
+              <p>You've rejected Mary Richards's response and said you want to take the case to court.</p>
+              <p>We'll review the case. We'll email you if we set a hearing date to tell you how to prepare.</p>
 
 
-                  <p>Your claim has been allocated to the Small Claims Track. The claim is listed for a
-                    hearing at Guildford County Court on <span class="bold">XX March 2019</span> at <span class="bold">12:00 noon</span>.
-                  </p>
-
-                  <p>You must pay a hearing fee of £25.00 by XX January 2019. If you don't pay the fee the hearing won't go ahead.
-                  </p>
-
-                  <p><a class="button" href="">Pay the hearing fee</a></p>
-
-                  <p>The hearing should take around 1 hour. If you know that this estimate might
-                    be substantially inaccurate, you must notify the court immediately.
-                  </p>
-
-                  <p><a href="">Find out what to expect at a hearing</a></p>
-                  </div>
-                   <div class="status-block" style="margin-top: 20px">
-                    <h4 class=" heading-small">Help us provide better, fairer services</h4>
-                    <p><a href="https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html">Tell us a bit more about yourself</a> to help us understand how our services work for different people.</p>
-                  </div>
-              </div>
+              <!--<p><a href="../../../defendant/correspondence/forms/dqs">Download your proposed hearing requirements</a>-->
+              <!--(PDF, 13KB)</p>-->
 
               <fieldset></fieldset>
-              {% include 'prototypes/prototype-may-2019/includes/contact.html' %}
-
+              {% include 'prototypes/prototype-apr-2019/includes/contact.html' %}
             </div>
           </div>
 
-          <!--<div class="column-one-third">-->
-          <!--<div class="right-column-nav" style="margin-top: 20px">-->
-          <!--&lt;!&ndash;<hr class="light-hr" style="margin-top: 5px">&ndash;&gt;-->
-          <!--<h3 class="heading-small">More actions</h3>-->
-          <!--<p></p><a href="">Tell us you've settled</a></p>-->
-          <!--<p></p><a href="">Stopping the claim</a></p>-->
-          <!--</div>-->
-          <!--</div>-->
+          <div class="column-one-third">
+            <div class="right-column-nav" style="margin-top: 20px">
+              <!--<hr class="light-hr" style="margin-top: 5px">-->
+              <h3 class="heading-small">More actions</h3>
+              <p></p><a href="">Tell us you've settled</a></p>
+              <p></p><a href="">Stopping the claim</a></p>
+            </div>
+          </div>
 
         </div>
 
@@ -114,42 +98,11 @@ Money Claims Prototype
           <div class="hmcts-timeline" style="margin-top: 40px">
             <div class="hmcts-timeline__item">
               <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">Hearing is booked</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p><a href="">Link to view the listing details</a></p>
-              </div>
-              <p class="hmcts-timeline__date" style="margin-top: -10px">
-                <time style="color: grey">28 February 2019</time>
-              </p>
-            </div>
-            <div class="hmcts-timeline__item">
-              <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">Any events happened in between order and hearing</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p>For example - expert appointment, evidence exchange</p>
-                <p style="margin-top: -10px"><a href="">Link to view relevant details</a></p>
-              </div>
-              <p class="hmcts-timeline__date" style="margin-top: -10px">
-                <time style="color: grey">XX February 2019</time>
-              </p>
-            </div>
-            <div class="hmcts-timeline__item">
-              <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">The court sent you an order</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p><a href="">Download the court order</a>
-                  (PDF, 13KB)</p>
-              </div>
-              <p class="hmcts-timeline__date" style="margin-top: -10px">
-                <time style="color: grey">30 January 2019</time>
-              </p>
-            </div>
-            <div class="hmcts-timeline__item">
-              <div class="hmcts-timeline__header">
                 <h2 class="hmcts-timeline__title">You rejected Mary Richard's response</h2>
                 <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
                 <p>You said you don't want to try mediation and intend to proceed to a hearing</p>
-                <p style="margin-top: -10px"><a href="../../../defendant/correspondence/forms/dqs">Download your proposed hearing requirements</a>
+                <p style="margin-top: -10px"><a href="../../../defendant/correspondence/forms/dqs">Download your
+                  proposed hearing requirements</a>
                   (PDF, 13KB)</p>
               </div>
               <p class="hmcts-timeline__date" style="margin-top: -10px">
@@ -193,8 +146,21 @@ Money Claims Prototype
 
         </div>
 
+
       </div>
+
     </div>
+  </div>
+
+
+  <!--<div class="column-one-third">-->
+  <!--<div class="right-column-nav">-->
+  <!--<hr class="light-hr " style="margin-top: 83px">-->
+  <!--<h3 class="heading-small">More actions</h3>-->
+  <!--<p></p><a href="">Tell us you've settled</a></p>-->
+  <!--<p></p><a href="">Stopping the claim</a></p>-->
+  <!--</div>-->
+  <!--</div>-->
 </main>
 
 <script src="/public/javascripts/tree.js"></script>

@@ -19,7 +19,7 @@ Money Claims Prototype
     <ol>
       <!--<li><a href="#" onclick="history.go(-1)">All claims</a></li>-->
 
-      <li><a href="all-claims?claimant=5">All claims</a></li>
+      <li><a href="all-claims?claimant=4">All claims</a></li>
 
       <li aria-current="page">Claim details</li>
 
@@ -49,36 +49,83 @@ Money Claims Prototype
 
         <div id="tabOneContent">
           <div class="column-two-thirds">
+
             <div class="description" style="background-color: #fff">
+
+              <div class="status-block single">
+                <h4 class=" heading-small">Prepare for the hearing</h4>
+                <p>You must comply with the court's directions to prepare for the
+                  hearing:</p>
+              </div>
+
               <div class="status-block" style="margin-top: 20px">
-                  <h4 class=" heading-small">You must pay the hearing fee</h4>
+                <p class="bold">1) Upload evidence</p>
+                <p>You must upload and submit your own statement, any witness statements and copies of all
+                  documents you intend to rely on at the hearing. You must upload them no later than 4pm on XX January 2019.</p>
 
+                <div class="form-group">
+                  <form method="post" action="" class="form">
+                    {{formData | safe}}
+                    <input type="hidden" name="" value="on">
+                    <input type="submit" class="button" value="Upload">
+                  </form>
+                </div>
+              </div>
 
-                  <p>Your claim has been allocated to the Small Claims Track. The claim is listed for a
-                    hearing at Guildford County Court on <span class="bold">XX March 2019</span> at <span class="bold">12:00 noon</span>.
-                  </p>
+              <!--<div class="status-block" style="margin-top: 20px">-->
+                <!--<p class="bold">2) Choose experts</p>-->
+                <!--<p>You must choose three experts no later than 4pm on XX January 2019. Any report from an expert can-->
+                  <!--only-->
+                  <!--be-->
+                  <!--used at a hearing unless permission has been granted by the court beforehand.</p>-->
 
-                  <p>You must pay a hearing fee of £25.00 by XX January 2019. If you don't pay the fee the hearing won't go ahead.
-                  </p>
+                <!--<div class="form-group">-->
+                  <!--<form method="post" action="" class="form">-->
+                    <!--{{formData | safe}}-->
+                    <!--<input type="hidden" name="" value="on">-->
+                    <!--<input type="submit" class="button" value="Choose experts">-->
+                  <!--</form>-->
+                <!--</div>-->
+              <!--</div>-->
 
-                  <p><a class="button" href="">Pay the hearing fee</a></p>
+              <div class="status-block" style="margin-top: 20px">
+                <p class="bold">2) Free telephone mediation</p>
 
-                  <p>The hearing should take around 1 hour. If you know that this estimate might
-                    be substantially inaccurate, you must notify the court immediately.
-                  </p>
+                <p>The court has reviewed your documents and believes that your claim is suitable for
+                  telephone mediation. This is a free service to give you the opportunity to resolve your dispute without having
+                  to attend a court hearing.</p>
 
-                  <p><a href="">Find out what to expect at a hearing</a></p>
-                  </div>
-                   <div class="status-block" style="margin-top: 20px">
-                    <h4 class=" heading-small">Help us provide better, fairer services</h4>
-                    <p><a href="https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html">Tell us a bit more about yourself</a> to help us understand how our services work for different people.</p>
-                  </div>
+                <div class="form-group">
+                  <form method="post" action="" class="form">
+                    {{formData | safe}}
+                    <input type="hidden" name="" value="on">
+                    <input type="submit" class="button" value="Accept or reject free mediation">
+                  </form>
+                </div>
               </div>
 
               <fieldset></fieldset>
-              {% include 'prototypes/prototype-may-2019/includes/contact.html' %}
+              <details>
+                <summary><span class="summary">If you fail to comply with the directions</span></summary>
+                <div class="panel panel-border-narrow">
+                  <p>The claim may be adjourned and you may have to pay costs.
 
+                  </p>
+                </div>
+              </details>
+
+              <details>
+                <summary><span class="summary">If you don't agree with the order</span></summary>
+                <div class="panel panel-border-narrow">
+
+                  <p>You have the right to apply to have the order set aside, varied or stayed. If you make such an application you must pay a fee and deliver it to the court within seven days.</p>
+
+                </div>
+              </details>
+
+              {% include 'prototypes/prototype-apr-2019/includes/contact.html' %}
             </div>
+
           </div>
 
           <!--<div class="column-one-third">-->
@@ -112,27 +159,6 @@ Money Claims Prototype
           </div>
 
           <div class="hmcts-timeline" style="margin-top: 40px">
-            <div class="hmcts-timeline__item">
-              <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">Hearing is booked</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p><a href="">Link to view the listing details</a></p>
-              </div>
-              <p class="hmcts-timeline__date" style="margin-top: -10px">
-                <time style="color: grey">28 February 2019</time>
-              </p>
-            </div>
-            <div class="hmcts-timeline__item">
-              <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">Any events happened in between order and hearing</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p>For example - expert appointment, evidence exchange</p>
-                <p style="margin-top: -10px"><a href="">Link to view relevant details</a></p>
-              </div>
-              <p class="hmcts-timeline__date" style="margin-top: -10px">
-                <time style="color: grey">XX February 2019</time>
-              </p>
-            </div>
             <div class="hmcts-timeline__item">
               <div class="hmcts-timeline__header">
                 <h2 class="hmcts-timeline__title">The court sent you an order</h2>

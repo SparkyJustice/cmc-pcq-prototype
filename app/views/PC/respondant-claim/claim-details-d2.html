@@ -10,6 +10,7 @@ Money Claims Prototype
 {% endblock %}
 {% block content %}
 
+
 <main id="content" role="main">
 
   {% include "includes/phase_banner_beta.html" %}
@@ -18,7 +19,7 @@ Money Claims Prototype
     <ol>
       <!--<li><a href="#" onclick="history.go(-1)">All claims</a></li>-->
 
-      <li><a href="all-claims?claimant=2">All claims</a></li>
+      <li><a href="all-claims?defendant=2">All claims</a></li>
 
       <li aria-current="page">Claim details</li>
 
@@ -36,9 +37,11 @@ Money Claims Prototype
 
     <div class="column-full-width">
 
-      <div class="tabGroup3" style="margin-top: 40px">
-        <a id="tabH" class="tab-on" onclick="tabGroup3(tabContent, 'TAB-ONE')" href="javascript: void(0)">Next steps</a>
-        <a id="tabI" class="tab" onclick="tabGroup3(tabContent, 'TAB-TWO')" href="javascript: void(0)">Claim history</a>
+      <div class="tabGroup2" style="margin-top: 40px">
+        <a id="tabE" class="tab-on" onclick="tabGroup2(tabContent, 'TAB-ONE')" href="javascript: void(0)">Next steps</a>
+        <a id="tabF" class="tab" onclick="tabGroup2(tabContent, 'TAB-TWO')" href="javascript: void(0)">Claim history</a>
+        <a id="tabG" class="tab" onclick="tabGroup2(tabContent, 'TAB-THREE')" href="javascript: void(0)">Settle out of
+          court</a>
         <hr style="margin-top: -2px">
       </div>
 
@@ -48,60 +51,43 @@ Money Claims Prototype
           <div class="column-two-thirds">
             <div class="description" style="background-color: #fff">
               <!--Action one-->
-               <div class="status-block" style="margin-top: 20px">
-                <h4 class=" heading-small">Respond to defendant</h4>
-              <p>Mary Richards has rejected your claim. </p>
+              <h4 class=" heading-small">You might have to go to a hearing</h4>
 
-              <!--<p>The claim has been automatically registered for free-->
-              <!--telephone mediation.</p>-->
+              <p>If Jan Clark accepts your response the claim will be settled. We'll contact you when they respond.</p>
 
-              <!--<p>If you reject their response, we'll contact you with a mediation appointment unless you choose to opt out.</p>-->
+              <p>If they reject your response the court will review the case. You might have to go to a hearing.</p>
 
-              <p>You need to accept or reject their defence before 23 February 2019.</p>
+              <p>You need to give us some more details in case the claim goes to a hearing.</p>
 
-              <!--<p>The claim won't proceed if you don't respond before 26 January 2019.</p>-->
+              <!--<p>Your defence won't proceed if you don't tell us more about the claim before 4pm on {DQ deadline}.</p>-->
 
               <div class="form-group">
-                <form method="post" action="../../claimant-response/dispute-claim/task-list" class="form">
+                <form method="post" action="../../../defendant/task-list/hearing/support" class="form">
                   {{formData | safe}}
-                  <!--<input type="hidden" name="mediation-pilot" value="on">-->
-                  <input type="submit" class="button" value="View and respond">
+                  <input type="hidden" name="new-dashboard" value="on">
+                  <input type="submit" class="button" value="Tell us more about the claim">
                 </form>
-              </div>
-            </div>
-
-              <!--<p><a href="">Download their response</a>-->
-                <!--(PDF, 123KB)</p>-->
-
-              <!--<p><a href="../../../defendant/correspondence/forms/dqs">Download their proposed hearing requirements</a>-->
-                <!--(PDF, 132KB)</p>-->
-
-               <div class="status-block" style="margin-top: 20px">
-                <h4 class=" heading-small">Help us provide better, fairer services</h4>
-                <p><a href="https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html">Tell us a bit more about yourself</a> to help us understand how our services work for different people.</p>
               </div>
 
               <fieldset></fieldset>
-              {% include 'prototypes/prototype-may-2019/includes/contact.html' %}
+              {% include 'prototypes/prototype-apr-2019/includes/contact.html' %}
 
             </div>
-
           </div>
 
-          <div class="column-one-third">
-            <div class="right-column-nav" style="margin-top: 20px">
-              <!--<hr class="light-hr" style="margin-top: 5px">-->
-              <h3 class="heading-small">More actions</h3>
-              <p></p><a href="">Tell us you've settled</a></p>
-              <p></p><a href="">Stopping the claim</a></p>
-            </div>
-          </div>
+          <!--<div class="column-one-third">-->
+            <!--<div class="right-column-nav" style="margin-top: 20px">-->
+              <!--&lt;!&ndash;<hr class="light-hr" style="margin-top: 5px">&ndash;&gt;-->
+              <!--<h3 class="heading-small">More actions</h3>-->
+              <!--<p></p><a href="">I've paid in full</a></p>-->
+            <!--</div>-->
+          <!--</div>-->
 
         </div>
 
+
         <div id="tabTwoContent">
           <!--<h3 class="heading-medium">Claim history</h3><br>-->
-
           <!--<div class="govuk-form-group">-->
             <!--<label class="font-xsmall" for="sort">-->
               <!--Sort by-->
@@ -116,15 +102,16 @@ Money Claims Prototype
             <span class="font-xsmall breakable-text">Sort by:</span>&nbsp; &nbsp;
             <h3 class="font-xsmall breakable-text">Newest</h3>&nbsp; &nbsp;
             <span class="verticalLine">&nbsp; &nbsp; <a class="font-xsmall" href="">Oldest</a>&nbsp;
-            &nbsp;</span>
+            &nbsp;</span
           </div>
 
           <div class="hmcts-timeline" style="margin-top: 40px">
             <div class="hmcts-timeline__item">
               <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">Mary Richards rejected your claim</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
-                <p><a href="../../../defendant/correspondence/forms/claim-form-defendant">Download their response</a>
+                <h2 class="hmcts-timeline__title">You rejected the claim</h2>
+                <!--<p class="hmcts-timeline__by">by you (defendant)</p>-->
+                <p>You said you don't want to try mediation</p>
+                <p style="margin-top: -10px"><a href="../../../defendant/correspondence/forms/claim-form-defendant">Download your response</a>
                   (PDF, 123KB)</p>
               </div>
               <p class="hmcts-timeline__date" style="margin-top: -10px">
@@ -133,8 +120,8 @@ Money Claims Prototype
             </div>
             <div class="hmcts-timeline__item">
               <div class="hmcts-timeline__header">
-                <h2 class="hmcts-timeline__title">You submitted your claim</h2>
-                <!--<p class="hmcts-timeline__by">by you (claimant)</p>-->
+                <h2 class="hmcts-timeline__title">Claim made against you</h2>
+                <!--<p class="hmcts-timeline__by">by claimant</p>-->
                 <p><a href="../../../defendant/correspondence/forms/claim-form-claimant?check=1">Download claim</a>
                   (PDF, 123KB)</p>
               </div>
@@ -147,9 +134,31 @@ Money Claims Prototype
 
       </div>
 
+      <div id="tabThreeContent">
+        <div class="description" style="background-color: #fff">
+          <div class="column-two-thirds">
+            <h4 class=" heading-small">Settle out of court</h4>
+            <p>If the case isn't resolved through mediation, you can still settle it without going to court.</p>
+            <p>For example you could offer to fix goods you sold the claimant or suggest a payment.</p>
+            <p>You can avoid getting a County Court Judgment if the claimant accepts your offer.</p>
+            <p><a class="button" href="../../offer-agreement/make-offer?defendant=defendant">Make an offer to settle</a></p>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   </div>
 
+
+  <!--<div class="column-one-third">-->
+  <!--<div class="right-column-nav">-->
+  <!--<hr class="light-hr " style="margin-top: 83px">-->
+  <!--<h3 class="heading-small">More actions</h3>-->
+  <!--<p></p><a href="">Tell us you've settled</a></p>-->
+  <!--<p></p><a href="">Stopping the claim</a></p>-->
+  <!--</div>-->
+  <!--</div>-->
 </main>
 
 <script src="/public/javascripts/tree.js"></script>
