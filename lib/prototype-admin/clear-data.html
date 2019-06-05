@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Clear data
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
+  .report-error {display: none}
+</style>
+<main id="content" role="main">
+
+  <h1 class="heading-medium">
+    Data cleared
+  </h1>
+
+  <p>
+    The session data has been cleared.
+  </p>
+
+  <p>
+    <a href="javascript: history.back(1)">
+      Back to previous page
+    </a>
+  </p>
+
+</main>
+
+{% endblock %}
