@@ -17,7 +17,7 @@
 
     <div class="details" style="margin-top: -30px">
         <span style=""><h2 style="">
-          <h2 class="heading-medium">Jan Clark v Mary Richards</h2>
+          <h2 class="heading-medium">Claimant Name v Defendant Name</h2>
           <h2 class="font-xsmall" style="margin-top: -10px">Claim number: <span style="">352MC733</span></h2>
     </div>
 
@@ -63,7 +63,7 @@
 
               <div class="status-block">
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards has rejected your claim.</p>
+                <p>Defendant Name has rejected your claim.</p>
                 <p>You can accept or reject their response. You need to respond before 4pm on {{ now | date('add', 5, 'days') | date }}. If you don't respond by then, you might have to go to hearing.</p>
                 <div class="form-group">
                   <form method="post" action="claimant-response/dispute-claim/task-list" class="form">
@@ -75,7 +75,7 @@
               </div>
               <div class="status-block">
                 <h2 class="heading-medium">Offer to settle out of court</h2>
-                <p>Mary Richards has also made an offer to settle. <a href="#settle-out-of-court">Respond to the offer</a>.</p>
+                <p>Defendant Name has also made an offer to settle. <a href="#settle-out-of-court">Respond to the offer</a>.</p>
               </div>
               <div class="status-block single">
                 <h2 class="heading-medium">Tell us you've ended the claim</h2>
@@ -93,16 +93,16 @@
 
               {% if data['claimant'] == 1 %}
               <h2 class="heading-medium">Wait for the defendant to respond</h2>
-              <p>Mary Richards has until 4pm on 24 December 2018 to respond. They can request an extra 14 days if they need it.</p>
+              <p>Defendant Name has until 4pm on 24 December 2018 to respond. They can request an extra 14 days if they need it.</p>
               <p>You can request a County Court Judgment against them if they don't respond by the deadline.</p>
 
 
               {% elseif data['claimant'] == 2 %}
               <div class="status-block single">
                 <h2 class="heading-medium">You can request a County Court Judgment</h2>
-                <p>Mary Richards has not responded to your claim by the deadline. You can request a County Court Judgment (CCJ) against them.</p>
+                <p>Defendant Name has not responded to your claim by the deadline. You can request a County Court Judgment (CCJ) against them.</p>
                 <p>The court will order them to pay the money. It doesn't guarantee that they'll pay it.</p>
-                <p>Mary Richards can still respond to the claim until you request a CCJ.</p>
+                <p>Defendant Name can still respond to the claim until you request a CCJ.</p>
                 <p><a href="applications-and-judgments/default-judgment" class="button">Request a CCJ</a></p>
               </div>
 
@@ -111,20 +111,20 @@
               <div class="status-block single">
                 <h2 class="heading-medium">Wait for the judgment to be confirmed</h2>
                 <p>We'll contact you within 5 days to tell you whether the judgment has been entered.</p>
-                <p>Mary Richards can no longer respond to your claim using this service - they may have responded by post.</p>
+                <p>Defendant Name can no longer respond to your claim using this service - they may have responded by post.</p>
                 <p>If we receive a postal response that they sent before the deadline we'll reject your request for judgment.</p>
               </div>
 
 
               {% elseif data['claimant'] == 3.1 %}
               <h2 class="heading-medium">Wait for the defendant to respond</h2>
-              <p>Mary Richards requested an extra 14 days to respond to your claim. They now have until 4pm on <span class="dates"></span> to respond.</p>
+              <p>Defendant Name requested an extra 14 days to respond to your claim. They now have until 4pm on <span class="dates"></span> to respond.</p>
               <p>You can request a County Court Judgment (CCJ) against them if they don't respond by the deadline.</p>
 
 
               {% elseif data['claimant'] == 3.11 %}
               <h2 class="heading-medium">Wait for the defendant to respond</h2>
-              <p>Mary Richards requested an extra 14 days to respond, by post. They now have until 4pm on <span class="dates"></span> to respond.</p>
+              <p>Defendant Name requested an extra 14 days to respond, by post. They now have until 4pm on <span class="dates"></span> to respond.</p>
               <p>We've cancelled your request for a County Court Judgment (CCJ) against them.</p>
               <p>You can request a CCJ against them if they don't respond by the deadline.</p>
 
@@ -133,7 +133,7 @@
               <div class="status-block single">
                 <h2 class="heading-medium">Wait for the judgment to be confirmed</h2>
                 <p>We'll contact you within 5 days to tell you whether the judgment has been entered.</p>
-                <p>Mary Richards can no longer respond to your claim using this service - they may have responded by post.</p>
+                <p>Defendant Name can no longer respond to your claim using this service - they may have responded by post.</p>
                 <p>If we receive a postal response that they sent before the deadline we'll reject your request for judgment.</p>
               </div>
 
@@ -141,7 +141,7 @@
               {% elseif data['claimant'] == 3.4 %}
               <div class="status-block">
                 <h2 class="heading-medium">Wait for the defendant to pay you</h2>
-                <p>A County Court Judgment has been issued against Mary Richards.</p>
+                <p>A County Court Judgment has been issued against Defendant Name.</p>
                 <p>We'll send you both a copy of the judgment.</p>
                 <p>You need to tell us when you've been paid in full.</p>
                 <p><a href="paid-in-full/claimant" class="button secondary-button">Tell us you've been paid</a></p><br>
@@ -267,20 +267,20 @@
               {% elseif data['claimant'] == 6 %}
               <div class="status-block single">
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards said they paid you £1,500 on {{ now | date('add' , 3 , 'days') | date( 'subtract', 1, 'months') | date }}.</p>
+                <p>Defendant Name said they paid you £1,500 on {{ now | date('add' , 3 , 'days') | date( 'subtract', 1, 'months') | date }}.</p>
                 <p>You can accept or reject this response.</p>
                 <p><a href="claimant-response/paid-what-owe-claim-amount/task-list" class="button">View and respond</a></p>
               </div>
 
               {% elseif data['claimant'] == 7 %}
               <h2 class="heading-small">Respond to the defendant</h2>
-              <p>Mary Richards said they paid you £1,430 on {{ now | date('add' , 3 , 'days') | date( 'subtract', 1, 'months') | date }}.</p>
+              <p>Defendant Name said they paid you £1,430 on {{ now | date('add' , 3 , 'days') | date( 'subtract', 1, 'months') | date }}.</p>
               <p>You can accept or reject this response.</p>
               <p><a href="claimant-response/paid-what-owe-less-claim-amount/task-list" class="button">View and respond</a></p>
 
               {% elseif data['claimant'] == 8 %}
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards has rejected your claim.</p>
+                <p>Defendant Name has rejected your claim.</p>
                 <p>You can accept or reject their response. You need to respond before 4pm on {{ now | date('add', 5, 'days') | date }}. If you don't respond by then, you might have to go to hearing.</p>
                 <div class="form-group">
                 <form method="post" action="claimant-response/dispute-claim/task-list" class="form">
@@ -293,7 +293,7 @@
 
               {% elseif data['claimant'] == 9 %}
               <h2 class="heading-medium">Decide whether to proceed</h2>
-              <p>Mary Richards has rejected your claim.</p>
+              <p>Defendant Name has rejected your claim.</p>
               <p>You need to decide whether to proceed with the claim. You need to respond before 4pm on {{ now | date('add', 5, 'days') | date }}. Your claim won't continue if you don't respond by then.</p>
               <div class="form-group">
                 <form method="post" action="claimant-response/dispute-claim/task-list" class="form">
@@ -305,7 +305,7 @@
               {% elseif data['claimant'] == 9.1 %}
               <div class="status-block single">
                 <h2 class="heading-medium">Decide whether to proceed</h2>
-                <p>Mary Richards has rejected your claim.</p>
+                <p>Defendant Name has rejected your claim.</p>
                 <p>You need to decide whether to proceed with the claim. You need to respond before 4pm on {{ now | date('add', 5, 'days') | date }}. Your claim won't continue if you don't respond by then.</p>
                 <!-- <p>The claim has been automatically registered for free telephone mediation. We'll contact you with a mediation appointment unless you choose to opt out.</p> -->
                 <div class="form-group">
@@ -320,7 +320,7 @@
 
               {% elseif data['claimant'] == 10.001 %}
               <h2 class="heading-medium">Wait for the defendant to respond</h2>
-              <p>We've emailed Mary Richards the repayment plan and the settlement agreement for them to sign.</p>
+              <p>We've emailed Defendant Name the repayment plan and the settlement agreement for them to sign.</p>
               <p>They must respond before 4pm on {{ now | date('add', 7, 'days') | date }}. We'll email you when they respond.</p>
               <p>If they don't respond, you can
                 <a href="applications-and-judgments/default-judgment/claim-amount-deduct?radio-indent-group=No&radio-proceed=not-signed">request a County Court Judgment</a>.</p>
@@ -351,10 +351,10 @@
 
               {% elseif data['claimant'] == 10.03 %}
               <h2 class="heading-medium">You can request a County Court Judgment</h2>
-              <p>Mary Richards hasn't signed your settlement agreement.</p>
+              <p>Defendant Name hasn't signed your settlement agreement.</p>
               <p>You can request a County Court Judgment (CCJ) against them based on the repayment plan shown in the agreement.</p>
               <p>The court will order them to pay the money. It doesn't guarantee that they'll pay you.</p>
-              <p>Mary Richards can still sign the settlement agreement until you request a CCJ.</p>
+              <p>Defendant Name can still sign the settlement agreement until you request a CCJ.</p>
               <p><a
                 href="applications-and-judgments/default-judgment/claim-amount-deduct?radio-indent-group=No&radio-proceed=not-signed"
                 class="button" style="margin-bottom: 20px">Request a CCJ</a>
@@ -363,7 +363,7 @@
               {% elseif data['claimant'] == 10.1 %}
               <h2 class="heading-medium">Wait for the defendant to respond</h2>
               <p>You've signed a settlement agreement.</p>
-              <p>We've emailed Mary Richards the repayment plan and the settlement agreement for them to sign.</p>
+              <p>We've emailed Defendant Name the repayment plan and the settlement agreement for them to sign.</p>
               <p>They must respond before 4pm on 22 August 2018. We'll email you when they respond.</p>
               <p>If they do not think they can afford the plan, they can ask for a judge to make a different plan.</p>
 
@@ -371,7 +371,7 @@
               {% elseif data['claimant'] == 10.11 %}
               <div class="status-block">
                 <h2 class="heading-medium">Wait for the defendant to pay you</h2>
-                 <p>A County Court Judgment has been issued against Mary Richards.</p>
+                 <p>A County Court Judgment has been issued against Defendant Name.</p>
                  <p>We'll send you both a copy of the judgment.</p>
                  <p>You need to tell us when you've been paid in full.</p>
                   <p><a href="paid-in-full/claimant" class="button secondary-button">Tell us you've been paid</a></p><br>
@@ -392,7 +392,7 @@
               <!--{% elseif data['claimant'] == 10.12 %}-->
               <!--<div class="status-block">-->
                 <!--<h2 class="heading-small">Ask the court to recover the debt</h2>-->
-                <!--<p>If Mary Richards doesn't pay by the deadline, you can <a href="applications-and-judgments/warrant-of-control/mvp/enforcement-selection">ask the court to recover the debt</a> for you.</p>-->
+                <!--<p>If Defendant Name doesn't pay by the deadline, you can <a href="applications-and-judgments/warrant-of-control/mvp/enforcement-selection">ask the court to recover the debt</a> for you.</p>-->
                 <!--<p>You'll need to pay a fee each time you ask the court to recover the debt. The court adds this fee to the total debt owed to you.</p>-->
                 <!--<p>There's no guarantee that the court will get your money back.</p>-->
               <!--</div>-->
@@ -404,7 +404,7 @@
 
               {% elseif data['claimant'] == 10.121 %}
                 <h2 class="heading-medium">Ask the court to recover the debt</h2>
-                <p>If Mary Richards hasn't paid, you can ask the court to recover the debt for you.</p>
+                <p>If Defendant Name hasn't paid, you can ask the court to recover the debt for you.</p>
                 <p>You'll need to pay a fee each time you ask the court to recover the debt. The court adds this fee to the total debt owed to you.</p>
                 <p>There is no guarantee that the court will get your money back.</p>
                 <p><a class="button" href="applications-and-judgments/warrant-of-control/mvp/enforcement-selection">Apply for the court to recover debt</a></p>
@@ -533,13 +533,13 @@
 
               {% elseif data['claimant'] == 10.832 %}
               <h2 class="heading-medium">Wait for the court to review the case</h2>
-              <p>You've rejected Mary Richard's response and said you want to take the case to court.</p>
+              <p>You've rejected Defendant Richard's response and said you want to take the case to court.</p>
               <p>The court will review the case. We'll email you if we set a hearing date to tell you how to prepare.</p>
 
 
               {% elseif data['claimant'] == 10.84 %}
               <h2 class="heading-medium">Wait for the court to review the case</h2>
-              <p>You've rejected Mary Richard's response and said you want to take the case to court.</p>
+              <p>You've rejected Defendant Richard's response and said you want to take the case to court.</p>
               <p>The court will review the case. We'll email you if we set a hearing date to tell you how to prepare.</p>
 
 
@@ -562,7 +562,7 @@
 
               {% elseif data['claimant'] == 10.91 %}
               <h2 class="heading-medium">Wait for the court to review the case</h2>
-              <p>You've rejected Mary Richard's response and said you want to take the case to court.</p>
+              <p>You've rejected Defendant Richard's response and said you want to take the case to court.</p>
               <p>The court will review the case. We'll email you if we set a hearing date to tell you how to prepare.</p>
 
 
@@ -658,7 +658,7 @@
               {% elseif data['claimant'] == 11.102 %}
               <div class="status-block single">
                 <h2 class="heading-medium">Wait for the defendant to respond</h2>
-                  <p>Mary Richards has not responded to the order.</p>
+                  <p>Defendant Name has not responded to the order.</p>
                 <p>They missed the original deadline of {{ minus | date( 'subtract', 1, 'days' ) | date }}. They now have until {{ now | date( 'add', 11, 'days' ) | date }}.</p>
                 <p>If they don't respond by then, their defence will be cancelled by the court and you'll be able to request a County Court Judgment (CCJ) against them.</p>
 
@@ -673,7 +673,7 @@
               {% elseif data['claimant'] == 11.103 %}
               <div class="status-block single">
                 <h2 class="heading-medium">You can request a County Court Judgment</h2>
-                <p>Mary Richards didn't responded to the court order by the deadline. You can request a County Court Judgment (CCJ) against them.</p>
+                <p>Defendant Name didn't responded to the court order by the deadline. You can request a County Court Judgment (CCJ) against them.</p>
                 <p>The court will order them to pay the money. This doesn't guarantee that they'll pay it.</p>
                 <p><a href="applications-and-judgments/default-judgment" class="button">Request a CCJ</a></p>
               </div>
@@ -699,7 +699,7 @@
 
                 <p>The defendant's address is:</p>
                 <p>
-                  Mary Richards <br/>
+                  Defendant Name <br/>
                   12 Garden View<br />
                   Bristol<br />
                   BS4 7FB
@@ -901,7 +901,7 @@
               {% elseif data['claimant'] == 12 %}
               <div class="status-block single">
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards has rejected your claim.</p>
+                <p>Defendant Name has rejected your claim.</p>
                 <p>You can accept or reject their response. You need to respond before 4pm on {{ now | date('add', 5, 'days') | date }}. If you don't respond by then, you might have to go to hearing.</p>
                 <div class="form-group">
                   <form method="post" action="claimant-response/dispute-claim/task-list" class="form">
@@ -917,7 +917,7 @@
               <div class="status-block single">
                 <h2 class="heading-medium">Wait for the defendant to sign the settlement agreement</h2>
                 <p>You've agreed to the defendant's offer to settle out of court. You've signed an agreement to settle the claim.</p>
-                <p>We've asked Mary Richards to sign the agreement. We'll email you when they respond.</p>
+                <p>We've asked Defendant Name to sign the agreement. We'll email you when they respond.</p>
               </div>
 
 
@@ -933,7 +933,7 @@
               <div>
                 <h2 class="heading-medium">We'll ask the defendant about mediation</h2>
                 <p>You've agreed to try mediation.</p>
-                <p>We'll ask Mary Richards if they want to take part in mediation. We'll tell you how they respond.</p>
+                <p>We'll ask Defendant Name if they want to take part in mediation. We'll tell you how they respond.</p>
               </div>
 
 
@@ -974,7 +974,7 @@
               <p>You need to respond by <span class="dates"></span> (14 days
                 remaining). </p>
               <p><a href="view-claims/view-counterclaim1">View and respond to the counterclaim </a></p>
-              <p>If you don't respond Mary Richards can ask for a default County Court Judgment (CCJ) against you. A
+              <p>If you don't respond Defendant Name can ask for a default County Court Judgment (CCJ) against you. A
                 CCJ means the court orders you to pay the money.</p>
               <div class="form-group">
               </div>
@@ -983,7 +983,7 @@
               {% elseif data['claimant'] == 19 %}
               <div>
                 <h2 class="heading-medium">The defendant's response </h2>
-                <p>The defendant Mary Richards has rejected your the claim. </p>
+                <p>The defendant Defendant Name has rejected your the claim. </p>
                 <div class="form-group">
                   <p><a href="claimant-response/dispute-claim/view-response?mediation=no">View full
                     response </a></p>
@@ -993,21 +993,21 @@
               {% elseif data['claimant'] == 20 %}
               <div>
                 <h2 class="heading-medium">This claim is settled</h2>
-                <p>Mary Richards paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
+                <p>Defendant Name paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
               </div>
 
 
               {% elseif data['claimant'] == 20.1 %}
               <div>
                 <h2 class="heading-medium">This claim is settled</h2>
-                <p>Mary Richards paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
+                <p>Defendant Name paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
                 <p>The defendant's County Court Judgment will be cancelled.</p>
               </div>
 
               {% elseif data['claimant'] == 20.2 %}
               <div>
                 <h2 class="heading-medium">This claim is settled</h2>
-                <p>Mary Richards paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
+                <p>Defendant Name paid you on {{ now | date( 'subtract', 5, 'days' ) | date }}.</p>
                 <p>The defendant's County Court Judgment will be marked as paid.</p>
               </div>
 
@@ -1022,7 +1022,7 @@
               <div class="status-block single">
                 <h2 class="heading-medium">You have paid for a warrant of control</h2>
                 <p>A bailiff will try to recover the debt.</p>
-                <p>We'll post a letter with details of the warrant to you and to Mary Richards.</p>
+                <p>We'll post a letter with details of the warrant to you and to Defendant Name.</p>
                 <p><a target="_blank" href="https://hmcts-cet-prototype.herokuapp.com/claimant-guidance/index">See other debt recovery options</a><span class="font-xsmall">
                    (opens in a new window)</span></p>
               </div>
@@ -1031,7 +1031,7 @@
               {% elseif data['claimant'] == 23 %}
                 <div class="status-block single">
                   <h2 class="heading-medium">Tell us whether you'll attend a hearing</h2>
-                  <p>Mary Richards has requested to have the County Court Judgment against them removed.</p>
+                  <p>Defendant Name has requested to have the County Court Judgment against them removed.</p>
                   <p>The court has asked you to say whether you'll attend a hearing.</p>
                   <p>The hearing is only about the judgment, not the claim.</p>
 
@@ -1042,7 +1042,7 @@
               {% elseif data['claimant'] == 24 %}
                 <div class="status-block single">
                   <h2 class="heading-medium">Decide on attending a CCJ removal only hearing</h2>
-                  <p>Mary Richards has requested to remove the CCJ you issued.</p>
+                  <p>Defendant Name has requested to remove the CCJ you issued.</p>
                   <p>This hearing is not about the claim.  It is just about removing the CCJ. </p>
 
                   <p>Since you've already agreed the CCJ can be removed this CCJ removal request is unlikely to require a eharing.</p>
@@ -1054,7 +1054,7 @@
               {% elseif data['claimant'] == 26 %}
                 <!--  Vary requested - by set date -->
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards has requested to pay in full on 28 July 2019.</p>
+                <p>Defendant Name has requested to pay in full on 28 July 2019.</p>
                 <p>You can accept or reject their offer.</p>
                 <p><a href="/prototypes/prototype-may-2019/dashboard/applications-and-judgments/vary/task-list-claimant-response?instalments=false&bysetdate=true&vary=true&" class="button">View and respond</a></p>
 
@@ -1062,7 +1062,7 @@
               {% elseif data['claimant'] == 27 %}
                 <!-- Vary requested - installments -->
                 <h2 class="heading-medium">Respond to the defendant</h2>
-                <p>Mary Richards has asked to change how they repay you.</p>
+                <p>Defendant Name has asked to change how they repay you.</p>
                 <p>You can accept or reject their request.</p>
                 <p><a href="/prototypes/prototype-may-2019/dashboard/applications-and-judgments/vary/task-list-claimant-response?instalments=true&bysetdate=false&vary=true&" class="button">View and respond</a></p>
 
@@ -1072,7 +1072,7 @@
                 <div class="status-block">
                   <h2 class="heading-medium">Wait for the defendant to pay you</h2>
                   <p>A new County Court Judgment has been issued.</p>
-                  <p>We'll send a copy of the judgment to you and to Mary Richards.</p>
+                  <p>We'll send a copy of the judgment to you and to Defendant Name.</p>
                   <p>When you've been paid in full, you need to let us know.</p>
                   <p><a href="paid-in-full/claimant" class="button secondary-button">Tell us you've been paid</a></p><br>
                 </div>
@@ -1093,30 +1093,30 @@
 
               {% elseif data['claimant'] == 33 %}
                 <!-- Claimant - Attending hearing of defendants set aside request - Claim already settled -->
-                <h2 class="heading-medium">Wait for Mary Richard's hearing date</h2>
-                <p>The Court will decide if a hearing is required to deal with Mary Richard's cancel CCJ request.</p>
+                <h2 class="heading-medium">Wait for Defendant Richard's hearing date</h2>
+                <p>The Court will decide if a hearing is required to deal with Defendant Richard's cancel CCJ request.</p>
                 <p>We'll contact you with a date if there is a hearing.</p>
 
 
               {% elseif data['claimant'] == 34 %}
                 <!-- Claimant - Attending hearing of defendants set aside request - Claim not settled-->
-                <h2 class="heading-medium">Wait for Mary Richard's hearing date</h2>
-                <p>The Court will decide if a hearing is required to deal with Mary Richard's cancel CCJ request.</p>
+                <h2 class="heading-medium">Wait for Defendant Richard's hearing date</h2>
+                <p>The Court will decide if a hearing is required to deal with Defendant Richard's cancel CCJ request.</p>
                 <p>We'll contact you with a date if there is a hearing.</p>
-                <p>After the hearing Mary Richards will respond to your claim.</p>
+                <p>After the hearing Defendant Name will respond to your claim.</p>
 
 
               {% elseif data['claimant'] == 36 %}
                 <!-- Claimant - Not attending hearing of defendants set aside request - Claim already settled -->
-                <h2 class="heading-medium">Wait for Mary Richard's hearing date</h2>
+                <h2 class="heading-medium">Wait for Defendant Richard's hearing date</h2>
                 <p>We'll contact you if the CCJ is canceled. </p>
 
 
               {% elseif data['claimant'] == 37 %}
                 <!-- Claimant - Not attending hearing of defendants set aside request - Claim not settled -->
-                <h2 class="heading-medium">Wait for Mary Richard's hearing</h2>
-                <p>Wait for the outcome of Mary Richards cancel CCJ hearing.</p>
-                <p>Once that happens Mary Richards will respond to your claim.</p>
+                <h2 class="heading-medium">Wait for Defendant Richard's hearing</h2>
+                <p>Wait for the outcome of Defendant Name cancel CCJ hearing.</p>
+                <p>Once that happens Defendant Name will respond to your claim.</p>
 
 
 
@@ -1129,26 +1129,26 @@
             <!--<div id="tabs-3" class="tab-pane">-->
             <!--{% if data['claimant'] == 10 or data['claimant'] == 11%}-->
             <!--<h2 class="heading-medium">The defendant wants to settle out of court </h2>-->
-            <!--<p>Mary Richards has made an offer to settle out of court You can accept, reject or make a counter-->
+            <!--<p>Defendant Name has made an offer to settle out of court You can accept, reject or make a counter-->
             <!--offer.</p>-->
             <!--<a href="offer-agreement/view-offer?defendant=offer">View and respond to offer.</a>-->
             <!--{% elseif data['claimant'] == 12 %}-->
-            <!--<h2 class="heading-medium">We've sent your offer to Mary Richards</h2>-->
-            <!--<p>Mary Richards can accept, reject or make a counter offer. We'll email you when they respond.</p>-->
+            <!--<h2 class="heading-medium">We've sent your offer to Defendant Name</h2>-->
+            <!--<p>Defendant Name can accept, reject or make a counter offer. We'll email you when they respond.</p>-->
             <!--<p>If you settle out of court you’ll sign an agreement that replaces the claim. Until then the claim-->
             <!--continues and might go to a court hearing.</p>-->
             <!--{% elseif data['claimant'] == 16 %}-->
             <!--<h2 class="heading-medium">Sign a legal agreement to settle out of court</h2>-->
             <!--<div>-->
             <!--<p> The defendant has accepted your offer. You need to sign a legal agreement to settle out of-->
-            <!--court Mary Richards has signed the agreement.</p>-->
+            <!--court Defendant Name has signed the agreement.</p>-->
             <!--<p><a href='offer-agreement/agreement'>View and sign the agreement. </a></p>-->
             <!--</div>-->
             <!--{% elseif data['claimant'] == 17 %}-->
             <!--<h2 class="heading-medium">Sign a legal agreement to settle out of court</h2>-->
             <!--<div>-->
             <!--<p> The defendant has accepted your offer. You need to sign a legal agreement to settle out of-->
-            <!--court Mary Richards has signed the agreement.</p>-->
+            <!--court Defendant Name has signed the agreement.</p>-->
             <!--<p><a href='offer-agreement/agreement'>View and sign the agreement. </a></p>-->
             <!--</div>-->
             <!--{% endif %}-->
@@ -2507,8 +2507,8 @@
 
 
             <h2 class="heading-medium">Respond to the defendant</h2>
-            <p>Mary Richards has made an offer to settle out of court.</p>
-            <p>If you accept the offer, you can make a legal agreement between you and Mary Richards and resolve your dispute without a hearing.</p>
+            <p>Defendant Name has made an offer to settle out of court.</p>
+            <p>If you accept the offer, you can make a legal agreement between you and Defendant Name and resolve your dispute without a hearing.</p>
 
             <!--<p>You must accept or reject the offer before 4pm on {{ now | date('add', 7, 'days') | date }}. <span style="color: #DF3034">Think there's no deadline for out of court offers?</span></p>-->
            <!---->
@@ -2527,7 +2527,7 @@
             <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <td class="govuk-table__cell--left">Name</td>
-              <td class="govuk-table__cell--right">Mrs Mary Richards</td>
+              <td class="govuk-table__cell--right">Mrs Defendant Name</td>
             </tr>
             <tr class="govuk-table__row">
               <td class="govuk-table__cell--left">Address</td>

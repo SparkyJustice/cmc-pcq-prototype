@@ -37,7 +37,7 @@ table.new-dq td:last-child div {
     <tbody>
       <tr>
         <td><div>Name</div></td>
-        <td><div>Mrs Mary Richards</div></td>
+        <td><div>Mrs Defendant Name</div></td>
       </tr>
       <tr>
         <tr>
@@ -55,7 +55,7 @@ table.new-dq td:last-child div {
           Date of birth:
         </div></td>
         <td><div>
-          31 January 1970
+          31 Nameuary 1970
         </div></td>
       </tr>
       <tr>
@@ -197,7 +197,7 @@ table.new-dq td:last-child div {
             
               Signed
             </div></td>
-          <td><div>{% if party == 'claimant' %}Jan Clark{% else %}Mary Richards{% endif %}<br />{{ now | date( 'subtract', 1, 'day' ) | date }}
+          <td><div>{% if party == 'claimant' %}Claimant Name{% else %}Defendant Name{% endif %}<br />{{ now | date( 'subtract', 1, 'day' ) | date }}
           </div></td>
         </tr>
     </tbody>

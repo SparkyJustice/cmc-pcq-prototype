@@ -26,7 +26,7 @@ Money Claims Prototype
               <!-- Content for defendant -->
 
               <p>Make it clear what you will do and by when. For example: "I will pay you £240 on 29 April 2018 by bank transfer".</p>
-              <p>If you're also asking Jan Clark to do something, say clearly what it is and by when it should be done. For example: "You will fix the roof by 28 April 2018.".</p>
+              <p>If you're also asking Claimant Name to do something, say clearly what it is and by when it should be done. For example: "You will fix the roof by 28 April 2018.".</p>
 
               {% elseif data['defendant'] == "claimant" %}
               <!-- Content fo claimant -->
@@ -89,12 +89,12 @@ Money Claims Prototype
                    <p class="panel panel-border-wide">
                     {% if data['defendant'] == "defendant" %}
                     <!-- Content for defendant -->
-                    Jan Clark can accept or reject your offer.
+                    Claimant Name can accept or reject your offer.
                     {% elseif data['defendant'] == "claimant" %}
                     <!-- Content fo claimant -->
-                    Mary Richards can accept or reject your offer.
+                    Defendant Name can accept or reject your offer.
                     {% else %}
-                    Jan Clark can accept or reject your offer.
+                    Claimant Name can accept or reject your offer.
                     {% endif %}
                   </p>
                 </div>

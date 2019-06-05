@@ -41,7 +41,7 @@ Check your answers
 					Full name
 				</td>
 				<td>
-					Mrs Mary Richards
+					Mrs Defendant Name
 				</td>
 				<td class="change-answer">
 					<a href="../task-list/your-details/index?return_page={{ '../../task-list' | urlencode }}">
@@ -91,7 +91,7 @@ Check your answers
 						{% if data['day'] %}
 						{{ ( data['month'] + ' ' + data['day'] + ' ' + data['year']) | date('D MMMM YYYY') }}
 						{% else  %}
-						31 January 1970
+						31 Nameuary 1970
 						{% endif %}
 					</td>
 					<td class="change-answer">
@@ -400,7 +400,7 @@ Check your answers
 								</td>
 								<td>
 									{% if data['check'] =='9'  or data['check'] =='8'  or data['check']== 12 %}
-									<p>Mary Richards and I signed a contract for building works on our roof. The work on the roof was completed but there was a problem with one section. I asked Mary Richards to get the problem fixed, but hadn't had a reply.</p>
+									<p>Defendant Name and I signed a contract for building works on our roof. The work on the roof was completed but there was a problem with one section. I asked Defendant Name to get the problem fixed, but hadn't had a reply.</p>
 									<p>I'll have to get another builder to rectify the problem which will cost me £1,430.</p>
 									<p>Therefore, I'm making a money claim for £1,500 to compensate for the extra money I am going to need to spend.</p>
 
@@ -466,7 +466,7 @@ Check your answers
 								{% if data['amount-day'] %}
 								{{ ( data['amount-month'] + ' ' + data['amount-day'] + ' ' + data['amount-year']) | date('D MMMM YYYY') }}
 								{% else %}
-								31 January 2018
+								31 Nameuary 2018
 								{% endif %}
 							</td>
 							<td class="change-answer no-border">
@@ -478,7 +478,7 @@ Check your answers
 									How did you pay this amount?
 								</td>
 								<td>
-									{{ data['owe-reason'] or 'I paid this by cheque to Mary Richards in person' }}
+									{{ data['owe-reason'] or 'I paid this by cheque to Defendant Name in person' }}
 								</td>
 								<td class="change-answer ">
 								</td>
@@ -507,7 +507,7 @@ Check your answers
 									{% if data['amount-day'] %}
 									{{ ( data['amount-month'] + ' ' + data['amount-day'] + ' ' + data['amount-year']) | date('D MMMM YYYY') }}
 									{% else %}
-									31 January 2018
+									31 Nameuary 2018
 									{% endif %}
 								</td>
 								<td class="change-answer no-border">
@@ -519,7 +519,7 @@ Check your answers
 									How did you pay this amount?
 								</td>
 								<td>
-									{{ data['owe-reason'] or 'I paid this by cheque to Mary Richards in person' }}
+									{{ data['owe-reason'] or 'I paid this by cheque to Defendant Name in person' }}
 								</td>
 								<td class="change-answer ">
 
@@ -562,7 +562,7 @@ Check your answers
 									{% if data['amount-day'] %}
 									{{ ( data['amount-month'] + ' ' + data['amount-day'] + ' ' + data['amount-year']) | date('D MMMM YYYY') }}
 									{% else %}
-									31 January 2018
+									31 Nameuary 2018
 									{% endif %}
 								</td>
 								<td class="no-border">
@@ -574,7 +574,7 @@ Check your answers
 										How did you pay the amount claimed?
 									</td>
 									<td>
-											{{ data['owe-reason'] or 'I paid this by cheque to Mary Richards in person' }}
+											{{ data['owe-reason'] or 'I paid this by cheque to Defendant Name in person' }}
 
 									</td>
 									<td class="change-answer ">
@@ -1416,9 +1416,9 @@ Check your answers
 												The agreement
 											</td>
 											<td >
-												Mary Richards
+												Defendant Name
 												{% if data['radio-pay-group']=="Immediately" %}
-												will pay £1,500 immediately. Jan Clark will receive the money no later than {{ now | date( 'add', 5, 'days') | date }}. Any cheques or transfers will be clear in Jan Clark's account by this date.
+												will pay £1,500 immediately. Claimant Name will receive the money no later than {{ now | date( 'add', 5, 'days') | date }}. Any cheques or transfers will be clear in Claimant Name's account by this date.
 												{% elseif data['radio-pay-group']=="Instalments"  %}
 												will repay £1,500, in instalments of
 												{% if data['instalment-first-payment'] %}

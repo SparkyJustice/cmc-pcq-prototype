@@ -31,7 +31,7 @@ Money Claims Prototype
       The defendant's response
     </h1>
 
-      <p>Mary Richards admits they owe you  £{{ data['owe-amount'] or '1200' }}. They don't believe they owe the full amount claimed.</p>
+      <p>Defendant Name admits they owe you  £{{ data['owe-amount'] or '1200' }}. They don't believe they owe the full amount claimed.</p>
 
       {% if data['radio-pay-group'] == 'Set-date' %}
       <p>They've offered to pay you by {{ now | date( 'add', 3, 'months') | date }}.</p>
@@ -58,7 +58,7 @@ Money Claims Prototype
           <tbody>
             <tr>
               <td>03/11/2017</td>
-              <td>"I contacted Mary Richards to discuss building works on our roof."</td>
+              <td>"I contacted Defendant Name to discuss building works on our roof."</td>
             </tr>
             <tr>
               <td>06/11/2017</td>
@@ -96,7 +96,7 @@ Money Claims Prototype
       </div>
 
     <p class="heading-small">Why they disagree with your evidence</p>
-    <p>I didn't get an email from Jan about this, so I didn't get a chance to sort it out. It would be good to see a
+    <p>I didn't get an email from Name about this, so I didn't get a chance to sort it out. It would be good to see a
     copy of the email.</p>
 
 

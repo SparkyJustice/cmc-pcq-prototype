@@ -202,7 +202,7 @@ li:before {
           {% if data['check'] =='1' %}Company name{% else %}Name{% endif %}:
         </td>
         <td>
-          {% if data['check'] =='1' %}Smith Limited{% else %}Mrs Mary Richards{% endif %}
+          {% if data['check'] =='1' %}Smith Limited{% else %}Mrs Defendant Name{% endif %}
         </td>
       </tr>
       {% if   data['check']== 1  %}
@@ -211,7 +211,7 @@ li:before {
           Contact person:
         </td>
         <td>
-         Jane Smith
+         Namee Smith
        </td>
      </tr>
      <tr>
@@ -244,7 +244,7 @@ li:before {
           Date of birth:
         </td>
         <td>
-          31 January 1970
+          31 Nameuary 1970
         </td>
       </tr>
       {% endif %}
@@ -322,7 +322,7 @@ li:before {
        How they paid the amount
      </td>
      <td class="">
-      I sent a cheque to Jan Clark
+      I sent a cheque to Claimant Name
     </td>
   </tr>
   {% endif %} <!-- end of partial -->
@@ -406,7 +406,7 @@ li:before {
     <td colspan="2" class="single-cell">
       <ol style="margin-top: 0">
       {% if data['check'] =='1' or  data['check'] =='9'  or data['check'] =='8' %}
-      <li>Mary Richards and I signed a contract for building works on our roof. The work on the roof was completed but there was a problem with one section. I asked Mary Richards to get the problem fixed, but hadn't had a reply.</li>
+      <li>Defendant Name and I signed a contract for building works on our roof. The work on the roof was completed but there was a problem with one section. I asked Defendant Name to get the problem fixed, but hadn't had a reply.</li>
       <li>I'll have to get another builder to rectify the problem which will cost me &pound;1,500.</li>
       <li>Therefore, I'm making a money claim for &pound;1,500 to compensate for the extra money I am going to need to spend.</li>
       {% else %} {{data['defence-disagree-claim']}}{% endif %}
@@ -430,7 +430,7 @@ li:before {
        {% if data['check'] =='1' or data['check'] =='9' or data['check']== 5 or data['check']== 6 or data['check'] == 7 or data['check'] == 8.1 %}1 April 2017{% else %}{{data['cd-date-1']}}{% endif %}
      </td>
      {% if data['cd-timeline-2'] !='' %}<td class="no-border single-cell">{% else %}<td class="single-cell ">{% endif %}
-      {% if data['check'] =='1' or data['check'] =='9' or data['check']== 5 or data['check']== 6 or data['check'] == 7 or data['check'] == 8.1 %}I contacted Jan Clark to discuss building works on our roof.{% else %}{{data['cd-timeline-1']}}{% endif %}
+      {% if data['check'] =='1' or data['check'] =='9' or data['check']== 5 or data['check']== 6 or data['check'] == 7 or data['check'] == 8.1 %}I contacted Claimant Name to discuss building works on our roof.{% else %}{{data['cd-timeline-1']}}{% endif %}
     </td>
   </tr>
   {% if data['cd-timeline-2'] !='' or data['check'] =='1'  or data['check'] =='2' or data['check'] =='3' or data['check']== 5 or data['check']== 6 or data['check'] == 7 or data['check'] == 8.1 %}
@@ -1087,7 +1087,7 @@ li:before {
         <td class="no-border">
         </td>
         <td class="no-border">
-          Mary Richards
+          Defendant Name
         </td>
       </tr>
       {% endif %}
@@ -1140,9 +1140,9 @@ li:before {
   <script src="{{ asset_path }}/javascripts/jquery-1.11.3.js"></script>
   <script>
     $(document).ready(function() {
-      var monthNames = [ "January", "February", "March", "April", "May", "June",
+      var monthNames = [ "Nameuary", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December" ];
-      var monthNamesCal = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      var monthNamesCal = [ "Name", "Feb", "Mar", "Apr", "May", "Jun",
       "Jul", "Aug", "Sept", "Oct", "Nov", "Dec" ];
       var newDate = new Date();
       newDate.setDate(newDate.getDate()+ 14) ;

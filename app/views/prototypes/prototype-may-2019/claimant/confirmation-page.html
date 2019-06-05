@@ -48,7 +48,7 @@ Money Claims Prototype
                     <p> <a class="button" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
                 {% else %}
                     <p>We'll contact you with a date if there is a hearing.</p>
-                    <p>After the hearing Mary Richards will respond to your claim.</p>
+                    <p>After the hearing Defendant Name will respond to your claim.</p>
                     <p> <a class="button" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
                 {% endif %}
 
@@ -57,19 +57,19 @@ Money Claims Prototype
         <!-- Not attending -->
             <!-- if the claim is settled  -->
                 {% if data['claimsettled'] == 'true' %}
-                    <p>We'll send you a letter about the outcome of Mary Richards removing CCJ request.</p>
+                    <p>We'll send you a letter about the outcome of Defendant Name removing CCJ request.</p>
                     <p> <a class="button" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
                 {% else %}
             <!-- if the claim isn't currently settled  -->
-                    <p>Wait for the outcome of Mary Richards removing CCJ hearing.</p>
-                    <p>Once that happens Mary Richards will respond to your claim.</p>
+                    <p>Wait for the outcome of Defendant Name removing CCJ hearing.</p>
+                    <p>Once that happens Defendant Name will respond to your claim.</p>
                     <p> <a class="button" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
                 {% endif %}
             {% endif %}
 
 
     {% else %}
-        <p>Mary Richards has until 4pm on <span id="Date"></span> to respond to your claim. They can ask for an extra 14 days if they need it. We'll email you when they respond.</p>
+        <p>Defendant Name has until 4pm on <span id="Date"></span> to respond to your claim. They can ask for an extra 14 days if they need it. We'll email you when they respond.</p>
 
         <p>You can request a County Court Judgment (CCJ) against them if they don't respond.</p>
 
@@ -80,10 +80,10 @@ Money Claims Prototype
             <p>Your claim has been automatically registered for free telephone mediation.</p>
             <p>We'll contact you with a mediation appointment unless either:</p>
             <ul class="list list-bullet">
-                <li>Mary Richards admits all of your claim and pays in full</li>
+                <li>Defendant Name admits all of your claim and pays in full</li>
                 <li>they don't admit the full claim, but they reject mediation</li>
             </ul>
-            <p>You'll only speak to a mediator about the claim, not to Mary Richards.</p>
+            <p>You'll only speak to a mediator about the claim, not to Defendant Name.</p>
             <p><a href='no-mediation'>I don't want to try mediation</a></p>
             {% endif %} -->
 

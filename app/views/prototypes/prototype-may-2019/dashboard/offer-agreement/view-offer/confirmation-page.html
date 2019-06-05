@@ -49,12 +49,12 @@ Money Claims Prototype
       <fieldset>
         <h2 class="heading-medium">What happens next</h2>
         {% if data['radio-indent-group'] == "counter" or data['confirmation'] == 1 %}
-        <p>Mary Richards can accept, reject or make a counter offer. We'll email you when they respond.
+        <p>Defendant Name can accept, reject or make a counter offer. We'll email you when they respond.
         </p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
         {% elseif data['radio-indent-group'] == "Counter_defendant"  or data['confirmation'] == 6 %}
-        <p>The claimant Jan Clark can accept your counter offer, reject it or suggest an alternative. We'll email you when the defendant responds.
+        <p>The claimant Claimant Name can accept your counter offer, reject it or suggest an alternative. We'll email you when the defendant responds.
         </p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
@@ -69,7 +69,7 @@ Money Claims Prototype
 
 
         {% elseif data['radio-indent-group'] == "decline_counter" or data['confirmation'] == 6 %}
-        <p>You've rejected Jan Clark's offer to settle.
+        <p>You've rejected Claimant Name's offer to settle.
         </p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
@@ -90,23 +90,23 @@ Money Claims Prototype
 
         {% elseif data['radio-indent-group2'] == "accept-claimant-mediation" or data['confirmation'] == 5%}
 
-        <p>A mediator will contact both you and Jan Clark within the next 14 days to arrange an appointment.</p>
+        <p>A mediator will contact both you and Claimant Name within the next 14 days to arrange an appointment.</p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
         {% elseif data['response'] == "no_med_suggestion" or data['confirmation'] == 2 %}
-        <p>The defendant Mary Richards will be asked if they would like free mediation. We'll email you when the defendant responds.</p>
+        <p>The defendant Defendant Name will be asked if they would like free mediation. We'll email you when the defendant responds.</p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
 
 
         {% elseif data['radio-indent-group2'] == "decline-claimant-mediation" or data['confirmation'] == 6 %}
 
-        <p>You've rejected Jan Clark's offer of mediation. We'll email you when they respond.</p>
+        <p>You've rejected Claimant Name's offer of mediation. We'll email you when they respond.</p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 
 
         {% else %}
-        <p>The defendant Mary Richards can accept your counter offer, reject it or suggest an alternative. We'll email you when the defendant responds.
+        <p>The defendant Defendant Name can accept your counter offer, reject it or suggest an alternative. We'll email you when the defendant responds.
         </p>
         <p> View your claim status on <a href='#'>your money claims account</a>. </p>
 

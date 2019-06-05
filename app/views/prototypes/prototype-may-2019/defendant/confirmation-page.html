@@ -68,11 +68,11 @@ Money Claims Prototype
 		<!-- Admit all - pay Immediately -->
 		{% if data['radio-pay-group']=="Immediately" and data.radio_select_group=="all" or data['confirmation']== 1 or data['confirmation']== 9 %}
 
-		<p>We've emailed Jan Clark to tell them you'll pay immediately.</p>
+		<p>We've emailed Claimant Name to tell them you'll pay immediately.</p>
 
 
 		{% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-		<p>We've also sent your counterclaim to Jan Clark</p>
+		<p>We've also sent your counterclaim to Claimant Name</p>
 		{% endif %}
 
 		<h2 class="heading-medium">What happens next</h2>
@@ -87,7 +87,7 @@ Money Claims Prototype
 	<li>they tell the court that you've paid</li>
 </ul>
 
-    <p><a href="../dashboard/party-details/claimant">Contact Jan Clark</a> if you need their payment details.</p>
+    <p><a href="../dashboard/party-details/claimant">Contact Claimant Name</a> if you need their payment details.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
 		{% include "prototypes/prototype-may-2019/includes/counter.html" %}
@@ -99,11 +99,11 @@ Money Claims Prototype
 
 		<!-- Admit all - pay instalments -->
 		{% elseif data['radio-pay-group']=="Instalments" and data.radio_select_group=="all" or data['confirmation']== 2 %}
-		<p>We've emailed Jan Clark to tell them you've suggested paying by instalments.</p>
+		<p>We've emailed Claimant Name to tell them you've suggested paying by instalments.</p>
 		<p>We'll contact you when they respond.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
 
 		{% if data['defendant'] == 'org'  %}
@@ -112,17 +112,17 @@ Money Claims Prototype
 
 		<h2 class="heading-medium">What happens next</h2>
 
-	    <h3 class="heading-small">If Jan Clark accepts your offer</h3>
+	    <h3 class="heading-small">If Claimant Name accepts your offer</h3>
 
 		<p>You should:</p>
 
 		<ul class="list list-bullet">
 		  <li>set up your repayment plan to begin when you said it would</li>
-		  <li>{% if data.counterclaim=="true" %}<a href="party-details/defendant">contact Mary Richards</a>{%else%}<a href="party-details/claimant">contact Jan Clark</a>{% endif %} if you need their payment details</li>
+		  <li>{% if data.counterclaim=="true" %}<a href="party-details/defendant">contact Defendant Name</a>{%else%}<a href="party-details/claimant">contact Claimant Name</a>{% endif %} if you need their payment details</li>
 		  <li>make sure you get a receipt for each payment</li>
 		</ul>
 
-		<p>Because you’ve said you won’t pay immediately, Jan Clark can either:</p>
+		<p>Because you’ve said you won’t pay immediately, Claimant Name can either:</p>
 		<ul class="list list-bullet">
 			<li>ask you to sign a settlement agreement to formalise the repayment plan</li>
 			<li>request a County Court Judgment against you</li>
@@ -131,7 +131,7 @@ Money Claims Prototype
 
 
 
-	    <h3 class="heading-small">If Jan Clark rejects your offer</h3>
+	    <h3 class="heading-small">If Claimant Name rejects your offer</h3>
 
 		<p>The court will decide how you must pay.</p>
 
@@ -146,11 +146,11 @@ Money Claims Prototype
 
 		<!-- Admit all - pay by set date -->
 		{% elseif data['radio-pay-group']=="Set-date"  and ( data.radio_select_group=="all" or data['counter'] ) or data['confirmation']== 3 %}
-		<p>We've emailed Jan Clark your offer to pay by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %} and your explanation of why you can’t pay before then.</p>
+		<p>We've emailed Claimant Name your offer to pay by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %} and your explanation of why you can’t pay before then.</p>
 		<p>We'll contact you when they respond.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
 
 		{% if data['defendant'] == 'org' %}
@@ -159,20 +159,20 @@ Money Claims Prototype
 
       <h2 class="heading-medium">What happens next</h2>
 
-	    <h3 class="heading-small">If Jan Clark accepts your offer</h3>
+	    <h3 class="heading-small">If Claimant Name accepts your offer</h3>
 		<p>You should:</p>
 		<ul class="list list-bullet">
-		<li>pay Jan Clark by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</li>
+		<li>pay Claimant Name by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</li>
 		<li>make sure any cheques or bank transfers are clear in their account by the deadline</li>
 		<li><a href="../dashboard/party-details/claimant">contact them</a> if you need their payment details</li>
 		<li>make sure you get a receipt for your payment</li>
 		</ul>
-		<p>Because you’ve said you won’t pay immediately, Jan Clark can either:</p>
+		<p>Because you’ve said you won’t pay immediately, Claimant Name can either:</p>
 		<ul class="list list-bullet">
 			<li>ask you to sign a settlement agreement to formalise the repayment plan</li>
 			<li>request a County Court Judgment against you</li>
 		</ul>
-	    <h3 class="heading-small">If Jan Clark rejects your offer</h3>
+	    <h3 class="heading-small">If Claimant Name rejects your offer</h3>
 		<p>The court will decide how you must pay.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
@@ -186,14 +186,14 @@ Money Claims Prototype
 
     <!-- I part admit the claim - pay immediately -->
 		{% elseif ( data.radio_select_group2=="Some" or data['counter'] )  and data['radio-pay-group']=="Immediately" or data['confirmation']== 4 %}
-		<p>You've said you owe £{{ data['owe-amount'] or '1,200' }} and offered to pay Jan Clark immediately.</p>
+		<p>You've said you owe £{{ data['owe-amount'] or '1,200' }} and offered to pay Claimant Name immediately.</p>
 		<p>We'll contact you when they respond.</p>
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
 			<h2 class="heading-medium">What happens next</h2>
 
-			<p>You need to pay Jan Clark £{{ data['owe-amount'] or '1,200' }} immediately.</p>
+			<p>You need to pay Claimant Name £{{ data['owe-amount'] or '1,200' }} immediately.</p>
 
 		<p>Make sure that:</p>
 
@@ -203,13 +203,13 @@ Money Claims Prototype
 	<li>you get a receipt for any payments</li>
 </ul>
 
-		<p><a href="../dashboard/party-details/claimant">Contact Jan Clark</a> if you need their payment details.</p>
+		<p><a href="../dashboard/party-details/claimant">Contact Claimant Name</a> if you need their payment details.</p>
 
-			<h3 class="heading-small">If Jan Clark accepts your offer of £{{ data['owe-amount'] or '1,200' }}</h3>
+			<h3 class="heading-small">If Claimant Name accepts your offer of £{{ data['owe-amount'] or '1,200' }}</h3>
 			<p>The claim will be settled.</p>
 
 
-		    <h3 class="heading-small">If Jan Clark rejects your offer</h3>
+		    <h3 class="heading-small">If Claimant Name rejects your offer</h3>
 			   {% if data['radio-mediation-group']=="Yes" %}
       <p>We'll ask if they want to try mediation. If they agree, we'll contact you with an appointment.</p>
       <p>If they don't want to try mediation the court will review the case for the full amount of {% if data['mediation-pilot'] == 'on' %}£300{% else %}£1,500{% endif %}</p>
@@ -230,12 +230,12 @@ Money Claims Prototype
 
     <!-- I part admit the claim - pay instalments -->
 		{% elseif ( data.radio_select_group2=="Some" or data['counter']) and data['radio-pay-group']=="Instalments" or data['confirmation']== 6 %}
-		<p>You believe you owe £{{ data['owe-amount'] or '1,200' }}. We've emailed Jan Clark your offer to pay this amount by instalments.</p>
+		<p>You believe you owe £{{ data['owe-amount'] or '1,200' }}. We've emailed Claimant Name your offer to pay this amount by instalments.</p>
 		<p>We've also sent them your explanation of why you don't believe you owe the amount claimed.</p>
 		<p>We'll contact you when they respond.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
 
 		{% if data['defendant'] == 'org' %}
@@ -244,23 +244,23 @@ Money Claims Prototype
 
 	    <h2 class="heading-medium">What happens next</h2>
 
-	    <h3 class="heading-small">If Jan Clark accepts your offer</h3>
+	    <h3 class="heading-small">If Claimant Name accepts your offer</h3>
 
 		<p>You should:</p>
 
 		<ul class="list list-bullet">
 		  <li>set up your repayment plan to begin when you said it would</li>
-		  <li>{% if data.counterclaim=="true" %}<a href="party-details/defendant">contact Mary Richards</a>{%else%}<a href="party-details/claimant">contact Jan Clark</a>{% endif %} if you need their payment details</li>
+		  <li>{% if data.counterclaim=="true" %}<a href="party-details/defendant">contact Defendant Name</a>{%else%}<a href="party-details/claimant">contact Claimant Name</a>{% endif %} if you need their payment details</li>
 		  <li>make sure you get a receipt for each payment</li>
 		</ul>
 
-		<p>Because you’ve said you won’t pay immediately, Jan Clark can either:</p>
+		<p>Because you’ve said you won’t pay immediately, Claimant Name can either:</p>
 		<ul class="list list-bullet">
 			<li>ask you to sign a settlement agreement to formalise the repayment plan</li>
 			<li>request a County Court Judgment against you for £{{ data['owe-amount'] or '1,200' }}</li>
 		</ul>
 
-		    <h3 class="heading-small">If Jan Clark rejects that you only owe £{{ data['owe-amount'] or '1,200' }}</h3>
+		    <h3 class="heading-small">If Claimant Name rejects that you only owe £{{ data['owe-amount'] or '1,200' }}</h3>
 			   {% if data['radio-mediation-group']=="Yes" %}
       <p>We'll ask if they want to try mediation. If they agree, we'll contact you with an appointment.</p>
       <p>If they don't want to try mediation the court will review the case for the full amount of {% if data['mediation-pilot'] == 'on' %}£300{% else %}£1,500{% endif %}.</p>
@@ -269,7 +269,7 @@ Money Claims Prototype
     <p>The court will review the case for the full amount of {% if data['mediation-pilot'] == 'on' %}£300{% else %}£1,500{% endif %}. </p>
     {% endif %}
 
-		<h3 class="heading-small">If Jan Clark rejects your offer to pay in instalments</h3>
+		<h3 class="heading-small">If Claimant Name rejects your offer to pay in instalments</h3>
 			<p>The court will decide how you must pay.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
@@ -281,12 +281,12 @@ Money Claims Prototype
 
 		<!-- I part admit the claim - pay by set date -->
 		{% elseif ( data.radio_select_group2=="Some" or data['counter']) and data['radio-pay-group']=="Set-date" or data['confirmation']== 7 %}
-		<p>You believe you owe £{{ data['owe-amount'] or '1,200' }}. We've emailed Jan Clark your offer to pay this amount by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}.</p>
+		<p>You believe you owe £{{ data['owe-amount'] or '1,200' }}. We've emailed Claimant Name your offer to pay this amount by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}.</p>
 		<p>We've also sent them your explanation of why you don't believe you owe the amount claimed.</p>
 		<p>We'll contact you when they respond.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
 
 		{% if data['defendant'] == 'org' %}
@@ -295,22 +295,22 @@ Money Claims Prototype
 
 	    <h2 class="heading-medium">What happens next</h2>
 
-	    <h3 class="heading-small">If Jan Clark accepts your offer</h3>
+	    <h3 class="heading-small">If Claimant Name accepts your offer</h3>
 
 		<p>You should:</p>
 		<ul class="list list-bullet">
-		<li>pay Jan Clark by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</li>
+		<li>pay Claimant Name by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</li>
 		<li>make sure any cheques or bank transfers are clear in their account by the deadline</li>
 		<li><a href="../dashboard/party-details/claimant">contact them</a> if you need their payment details</li>
 		<li>make sure you get a receipt for your payment</li>
 		</ul>
-		<p>Because you’ve said you won’t pay immediately, Jan Clark can either:</p>
+		<p>Because you’ve said you won’t pay immediately, Claimant Name can either:</p>
 		<ul class="list list-bullet">
 			<li>ask you to sign a settlement agreement to formalise the repayment plan</li>
 			<li>request a County Court Judgment against you for £{{ data['owe-amount'] or '1,200' }}</li>
 		</ul>
 
-		    <h3 class="heading-small">If Jan Clark rejects that you only owe £{{ data['owe-amount'] or '1,200' }}</h3>
+		    <h3 class="heading-small">If Claimant Name rejects that you only owe £{{ data['owe-amount'] or '1,200' }}</h3>
 			   {% if data['radio-mediation-group']=="Yes" %}
       <p>We'll ask if they want to try mediation. If they agree, we'll contact you with an appointment.</p>
       <p>If they don't want to try mediation the court will review the case for the full amount of {% if data['mediation-pilot'] == 'on' %}£300{% else %}£1,500{% endif %}.</p>
@@ -318,7 +318,7 @@ Money Claims Prototype
 			   {% else %}
     <p>The court will review the case for the full amount of {% if data['mediation-pilot'] == 'on' %}£300{% else %}£1,500{% endif %}. </p>
     {% endif %}
-		<h3 class="heading-small">If Jan Clark rejects your offer to pay by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</h3>
+		<h3 class="heading-small">If Claimant Name rejects your offer to pay by {% if data['set-day'] %}{{ ( data['set-month'] + ' ' + data['set-day'] + ' ' + data['set-year']) | date('D MMMM YYYY') }}{% else %}{{ date | date('add', 15, 'days') | date }}{% endif %}</h3>
 			<p>The court will decide how you must pay.</p>
 
 
@@ -332,10 +332,10 @@ Money Claims Prototype
 
 		<!-- paid what i owe -->
 		{% elseif ( data.radio_select_group2=="Paid-some" or data['counter']) or data['confirmation']== 8 %}
-		<p>You told us you've paid the £{{ data['owe-amount'] or '1,200' }} you believe you owe. We've sent Jan Clark this response.</p>
+		<p>You told us you've paid the £{{ data['owe-amount'] or '1,200' }} you believe you owe. We've sent Claimant Name this response.</p>
 
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-	    <p>We've also sent your counterclaim to Jan Clark.</p>
+	    <p>We've also sent your counterclaim to Claimant Name.</p>
 	    {% endif %}
       <h2 class="heading-medium">What happens next</h2>
 	    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
@@ -343,10 +343,10 @@ Money Claims Prototype
 	    {% endif %}
 
 
-		<h3 class="heading-small">If Jan Clark accepts your response</h3>
+		<h3 class="heading-small">If Claimant Name accepts your response</h3>
 		<p>The claim will be settled.</p>
 
-		<h3 class="heading-small">If Jan Clark rejects your response</h3>
+		<h3 class="heading-small">If Claimant Name rejects your response</h3>
 
 	    {% if data['radio-mediation-group']=="Yes" %}
       	<p>We'll ask if they want to try mediation. If they agree, we'll contact you with an appointment.</p>
@@ -367,31 +367,31 @@ Money Claims Prototype
 
         <!-- Reject claim -->
         {% elseif data.radio_select_group2=="defend_now" or data['confirmation']== 12 %}
-        <p>We’ve emailed Jan Clark your response, explaining why you reject the claim.</p>
+        <p>We’ve emailed Claimant Name your response, explaining why you reject the claim.</p>
 
         {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-        <p>We've also sent your counterclaim to Jan Clark.</p>
+        <p>We've also sent your counterclaim to Claimant Name.</p>
         {% endif %}
         <h2 class="heading-medium">What happens next</h2>
         {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
         <h3 class="heading-small">The claim against you</h2>
           {% endif %}
 
-          <p>If Jan Clark accepts your response the claim will be settled. We'll contact you by post when they respond.</p>
+          <p>If Claimant Name accepts your response the claim will be settled. We'll contact you by post when they respond.</p>
 
           {% if data['radio-indent-group']=="Yes" or data['resolve_dispute']== "complete" %}
 
           {% if data['mediation-pilot']=="on" %}
-          <p>If Jan Clark rejects your response,</p>
+          <p>If Claimant Name rejects your response,</p>
           <ul class="list list-bullet">
-            <li>we'll contact you with a mediation appointment, unless Jan Clark chooses to opt out of mediation.</li>
+            <li>we'll contact you with a mediation appointment, unless Claimant Name chooses to opt out of mediation.</li>
             <li>if they opt out of mediation the court will review the case. You might have to go to a hearing. We'll
               contact you if we set a hearing date to tell you how to prepare.
             </li>
           </ul>
 
           {%else%}
-          <p>If Jan Clark rejects your response we'll ask them to try mediation. If they agree, we'll contact you to
+          <p>If Claimant Name rejects your response we'll ask them to try mediation. If they agree, we'll contact you to
             arrange an appointment.</p>
           <p>If they reject mediation the court will review the case. You might have to go to a hearing.</p>
           <p>We'll contact you if we set a hearing date to tell you how to prepare.</p>
@@ -429,20 +429,20 @@ Money Claims Prototype
 
 			<!-- Already paid -->
 			{% elseif  data.radio_select_group2=="paid" or data['confirmation']== 16 %}
-		<p>You told us you've paid the full claim amount of £{{ data['owe-amount'] or '1,500' }}. We've sent Jan Clark this response.</p>
+		<p>You told us you've paid the full claim amount of £{{ data['owe-amount'] or '1,500' }}. We've sent Claimant Name this response.</p>
 
 		    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
-		    <p>We've also sent your counterclaim to Jan Clark.</p>
+		    <p>We've also sent your counterclaim to Claimant Name.</p>
 		    {% endif %}
 		    <h2 class="heading-medium">What happens next</h2>
 		    {% if data['confirmation'] == 9 or data['counter'] == 'SET-OFF-COUNTER' or data['counter'] == 'FULL-COUNTER' %}
 		    <h3 class="heading-small">The claim against you</h2>
 		    {% endif %}
-			<p>If Jan Clark accepts your response the claim will be settled. We'll contact you when they respond.</p>
+			<p>If Claimant Name accepts your response the claim will be settled. We'll contact you when they respond.</p>
 
 
             {% if data['radio-indent-group']=="Yes" or data['resolve_dispute']== "complete" %}
-            <p>If Jan Clark rejects your response we'll ask them to try mediation. If
+            <p>If Claimant Name rejects your response we'll ask them to try mediation. If
               they agree, we'll contact you to arrange an appointment.</p>
             <p>If they reject mediation the court will review the case. You might have to go to a hearing.</p>
             <p>We'll contact you if we set a hearing date to tell you how to prepare.</p>
