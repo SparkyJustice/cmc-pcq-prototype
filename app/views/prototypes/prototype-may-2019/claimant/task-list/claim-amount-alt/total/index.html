@@ -44,13 +44,13 @@ Money Claims Prototype
           <p>Claiming money from someone who claims against you is called a 'counterclaim'.</p>
 
           <h2 class="heading-medium">Counterclaim fee</h2>
-          <p>You need to pay a £70 claim fee to make a £{{ data['counter-amount']|numeral }} counterclaim.</p>
+          <p>You need to pay a £105 claim fee to make a £{{ data['counter-amount']|numeral }} counterclaim.</p>
 
           {% elseif data['counter'] == 'SET-OFF-COUNTER' %}
 
           <p>Claiming money from someone who claims against you is called a 'counterclaim'.</p>
           <h2 class="heading-medium">Counterclaim fee</h2>
-          <p>You need to pay a £70 fee to make a counterclaim. The fee is based on the difference between your counterclaim amount and what you admitted you owe.</p>
+          <p>You need to pay a £105 fee to make a counterclaim. The fee is based on the difference between your counterclaim amount and what you admitted you owe.</p>
 
           {% endif %}
 
@@ -96,7 +96,7 @@ Money Claims Prototype
                   <td class="numeric last">
                     <label class="visuallyhidden" for="amount">Claim fee</label>
 
-                    <span id="interestValue" class="font-small">£70</span>
+                    <span id="interestValue" class="font-small">£105</span>
 
                   </td>
                 </tr>
@@ -198,7 +198,7 @@ Money Claims Prototype
                     <li>£1,000.01 to £1,500</li>
                   </ul>
                 </td>
-                <td>£70</td>
+                <td>£105</td>
                 {% if ( not data['counter'] ) %}
                 <td>£115</td>
                 {% endif %}

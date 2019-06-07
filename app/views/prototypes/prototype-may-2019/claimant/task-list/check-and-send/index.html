@@ -124,7 +124,7 @@ Check your answers
                 Date of birth
               </td>
               <td>
-               {% if data['check'] =='1' or data['check'] =='2'  or data['check'] =='3' %}31 Nameuary 1970{% else %}{{data['day']}} {{data['month']}} {{data['year']}}{% endif %}
+               {% if data['check'] =='1' or data['check'] =='2'  or data['check'] =='3' %}31 January 1970{% else %}{{data['day']}} {{data['month']}} {{data['year']}}{% endif %}
              </td>
              <td class="change-answer">
               <a href="../task-list/your-details/date-of-birth?return_page={{ '../../task-list/check-and-send#name' | urlencode }}">
@@ -601,7 +601,7 @@ Check your answers
         Claim fee
       </td>
       <td>
-        £75
+        £105
       </td>
       <td class="change-answer" id="interestValue">
       </td>
@@ -794,7 +794,7 @@ truth on the form.</p>
     </div>
   </div>
   <form method="post" action="check-and-send/enter-card" class="form form-group">
-    <button id="submit" class="button" >Submit and continue to payment (£75)</button>
+    <button id="submit" class="button" >Submit and continue to payment (£105)</button>
   </form>
 </div>
 <!--<div class="back">-->
@@ -802,7 +802,7 @@ truth on the form.</p>
   <!--</div>-->
   {% include 'prototypes/prototype-may-2019/includes/contact.html' %}
 </main>
-<form method="post"  action="#" class="form" style="position: absolute;">
+<!-- <form method="post"  action="#" class="form" style="position: absolute;">
   <select id="check2" name="check2" onchange="window.location.href='?check='+this.value">
     <option  value="0" >Choose</option>
     <option  value="1" {% if data['check'] == 1 %}selected{% endif %}>1. Show business statement of truth</option>
@@ -821,4 +821,5 @@ truth on the form.</p>
     $('#totalClaimAmount').val(x)
   })('totalAmountDisplay', "{{data['totalSum']}}", {{data['radio_group2']=="interest_no"}} || {{data['radio_group2']!="interest_yes"}} ? 70 : 84)
 </script>
+-->
 {% endblock %}
