@@ -942,47 +942,6 @@ hr {
   padding: 0.36842em 2.15789em 0.21053em 0.84211em;
 }
 
-
-.button-large {
-  background-color: #00823b;
-  position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  padding: .65em 1.5em .5em;
-  border: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  outline: 1px solid transparent;
-  outline-offset: -1px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 #003618;
-  -moz-box-shadow: 0 2px 0 #003618;
-  box-shadow: 0 2px 0 #003618;
-  font-size: 1em;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #fff;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: top;
-}
-.button-large:visited {
-  color: #fff;
-}
-.button-large:visited {
-  background-color: #00823b;
-}
-
-.button-large:hover, .button:focus {
-  background-color: #00692f;
-}
-
 @media (min-width: 641px) {
   .button-start,
   .button-get-started {
