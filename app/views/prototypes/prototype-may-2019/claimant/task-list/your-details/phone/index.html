@@ -17,9 +17,9 @@ Money Claims Prototype
   <div class="grid-row">
     <div class="column-two-thirds">
       {% if data.return_page and data.return_page.includes('check-and-send') or data.return_page and data.return_page.includes('check-your-answers')%}
-      <form method="post" action="{{ data.return_page if data.return_page | length > 0 else '../task-list' }}" class="form">
+      <form method="post" action="{{ data.return_page if data.return_page | length > 0 else 'http://localhost:3001/introduction-reduced?defendant=1' }}" class="form">
         {% else %}
-        <form method="post" action="../../task-list" class="form">
+        <form method="post" action="http://localhost:3001/introduction-reduced?defendant=1" class="form">
           {% endif %}
           {{formData | safe}}
           <h1 class="heading-large">
@@ -48,7 +48,7 @@ Money Claims Prototype
           <div class="form-group">
             <input type="submit" class="button" value="Save changes"/>
           </div>
-          <a href="{{ data.return_page if data.return_page | length > 0 else '../task-list' }}">Cancel</a>
+          <a href="{{ data.return_page if data.return_page | length > 0 else 'http://localhost:3001/introduction-reduced?defendant=true&' }}">Cancel</a>
           {% else %}
           <div class="form-group">
             <input type="submit" class="button" value="Save and continue"/>
