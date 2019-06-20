@@ -45,12 +45,12 @@ Money Claims Prototype
                 <!-- if the claim is settled  -->
                 {% if data['claimsettled'] == 'true' %}
                     <p>We'll contact you with a date if there is a hearing.</p>
-                    <p> <a class="button-large" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
+                    <p> <a class="button-large" href='/prototypes/prototype-may-2019/dashboard/claimant?claimant=33'>Go to your account</a> </p>
                 {% else %}
                     <p>We'll contact you with a date if there is a hearing.</p>
                     <p>After the hearing Defendant Name will respond to your claim.</p>
 
-                    <p> <a class="button-large" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
+                    <p> <a class="button-large" href='/prototypes/prototype-may-2019/dashboard/claimant?claimant=34'>Go to your account</a> </p>
 
                 {% endif %}
 
@@ -61,14 +61,14 @@ Money Claims Prototype
                 {% if data['claimsettled'] == 'true' %}
                     <p>We'll send you a letter about the outcome of Defendant Name removing CCJ request.</p>
 
-                   <p> <a class="button-large" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
+                   <p> <a class="button-large" href='/prototypes/prototype-may-2019/dashboard/claimant?claimant=36'>Go to your account</a> </p>
 
                 {% else %}
             <!-- if the claim isn't currently settled  -->
                     <p>Wait for the outcome of Defendant Name removing CCJ hearing.</p>
                     <p>Once that happens Defendant Name will respond to your claim.</p>
                     
-                    <p> <a class="button-large" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
+                    <p> <a class="button-large" href='/prototypes/prototype-may-2019/dashboard/claimant?claimant=37'>Go to your account</a> </p>
                     
                 {% endif %}
             {% endif %}
@@ -98,7 +98,7 @@ Money Claims Prototype
         {% include "includes/survey.html" %}
 
              <!--<p> <a class="button" href='../dashboard/home?dashboard=1.2'>Go to your account</a> </p>-->
-        <p> <a class="button-large" href='https://hmcts-cmc-pc-prototype.herokuapp.com/introduction.html'>Continue</a> </p>
+        <p> <a class="button-large" href='../dashboard/new-dashboard/claimant/all-claims?claimant=1'>Go to your account</a> </p>
     {% endif %}
 
 
