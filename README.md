@@ -1,3 +1,7 @@
+# Civil Money Claims Prototype - protected characteristic questions
+
+This is a copy of the original CMC prototype (cmc-prototype-pc) to be used for user testing in December 2019. The call to the PCQs is from the tasklist.
+
 # Civil Money Claims Prototype
 
 This is a CMC prototyping project based on the [GOV.UK prototyping kit](https://github.com/alphagov/govuk_prototype_kit).
