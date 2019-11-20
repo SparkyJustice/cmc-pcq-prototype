@@ -243,22 +243,6 @@ if (typeof (routes) !== 'function') {
 }
 
 //custom routes for sprint folders
-require('./app/views/prototypes/features-to-be-built/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-april-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-may-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-jun-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-jun2-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-jul-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-jul2-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-aug-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-sep-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-oct-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-nov-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-dec-2018/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-jan-2019/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-feb-2019/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-mar-2019/routes/routes.js')(app);
-require('./app/views/prototypes/prototype-apr-2019/routes/routes.js')(app);
 require('./app/views/prototypes/prototype-may-2019/routes/routes.js')(app);
 
 // Returns a url to the zip of the latest release on github

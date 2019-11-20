@@ -17,9 +17,9 @@ Money Claims Prototype
   <div class="grid-row">
       <div class="column-two-thirds">
         {% if data.return_page and data.return_page.includes('check-and-send') or data.return_page and data.return_page.includes('check-your-answers')%}
-          <form method="post" action="{{ data.return_page if data.return_page | length > 0 else 'https://hmcts-cmc-pc-prototype.herokuapp.com/introduction?defendant=false&' }}" class="form">
+          <form method="post" action="{{ data.return_page if data.return_page | length > 0 else 'https://hmcts-cmc-pc-prototype.herokuapp.com/introduction-v2?defendant=false&' }}" class="form">
         {% else %}
-          <form method="post" action="https://hmcts-cmc-pc-prototype.herokuapp.com/introduction?defendant=false&" class="form">
+          <form method="post" action="https://hmcts-cmc-pc-prototype.herokuapp.com/introduction-v2?defendant=false&" class="form">
         {% endif %}
           {{formData | safe}}
           <h1 class="heading-large">
