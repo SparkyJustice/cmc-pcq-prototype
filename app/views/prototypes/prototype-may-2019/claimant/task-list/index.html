@@ -121,7 +121,7 @@
           </tbody>
         </table>
         <br>
-<!-- JHS 201119add PCQs into tasklist -->
+<!-- JHS 201119 add PCQs into tasklist -->
         <table id="table-of-tasks">
           <thead>
             <tr>
@@ -187,5 +187,9 @@
     </div>
 </main>
 {% endblock %}
-{% block extra_js_1 %}<!-- ticky list javascript one -->{% endblock %}
+{% block extra_js_1 %}
+<script type="text/javascript">
+  console.log('formQuery ' {{formQuery}})
+</script><!-- ticky list javascript one -->{% endblock %}
+
 {% block extra_js_2 %}<!-- ticky list javascript two -->{% endblock %}
