@@ -655,7 +655,7 @@ module.exports = function(app){
 
 
     let resolve_dispute = req.session.data.resolve_dispute;
-    if (resolve_dispute === "c-omplete" ){
+    if (resolve_dispute === "-complete" ){
       res.redirect("resolve-dispute/check-your-answers");
     } else {
       next()
