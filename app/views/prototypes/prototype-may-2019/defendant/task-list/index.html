@@ -370,7 +370,41 @@
             </tbody>
           </table>
           {% endif %}
+<!-- JHS 201119 add PCQs into tasklist -->
+        <table id="table-of-tasks">
+          <thead>
+            <tr>
+              <th scope="col" id="col-task">
+                <span class="task-group">
+                  <span class="group-number" id="task-number"></span>
+                  Equality and diversity
+                </span>
+                <th class="numeric" id="task-status" scope="col" id="col-status">
+                  <span type="hidden" class="visually-hidden">task status</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
 
+              <!-- Check rules -->
+              <tr id="read-rules">
+                <td class="task">
+                  <a href="https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant">
+                    <span class="task-name"> Questions about you</span>
+                  </a>
+                </td>
+                <td class="numeric" id="task-status" scope="col" id="col-status">
+                  {% if data.pcqs=="complete" %}
+                  {% include "includes/task_status_finished.html" %}
+                  {% else %}
+                  {% include "includes/task_status_incomplete.html" %}
+                  {% endif %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <br>
+<!-- JHS end pcqs -->
 
             <br>
             <table id="table-of-tasks" class="submit">
