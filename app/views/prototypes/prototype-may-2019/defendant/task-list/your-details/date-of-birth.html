@@ -16,11 +16,7 @@ Money Claims Prototype
   {% endif %}
   <div class="grid-row">
     <div class="column-two-thirds">
-      {% if data.return_page and data.return_page.includes('check-and-send') or data.return_page and data.return_page.includes('check-your-answers')%}
-      <form method="post" action="{{ data.return_page if data.return_page | length > 0 else 'https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?defendant=true&' }}" class="form">
-        {% else %}
-        <form method="post" action="https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?defendant=true&" class="form">
-          {% endif %}
+      <form method="post" action="/defendant-pcq-call" class="form">
           {{formData | safe}}
           <h1 class="heading-large">
             Enter your date of birth

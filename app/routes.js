@@ -20,5 +20,13 @@ router.get('*/prototype-admin/view-data', function(req, res){
 
 // add your routes here
 
+router.post('/defendant-pcq-call', function (req, res, next) {
+	res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant')
+})
+
+router.post('/claimant-pcq-call', function (req, res, next) {
+	res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=claimant')
+})
+
 module.exports = router
 
