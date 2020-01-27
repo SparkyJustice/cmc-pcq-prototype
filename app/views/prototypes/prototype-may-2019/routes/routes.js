@@ -12,10 +12,37 @@ module.exports = function(app){
   })
 
   // add your routes here
+
+  // JHS 240120 add PCQs call
+  app.post('/when-do-you-want-to-pay', function (req, res) {
+    let whenPay = req.session.data['radio-pay-group']
+
+    if (whenPay == "Immediately") {
+      res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant')
+    } else if (whenPay =="Set-date"){
+
+        res.redirect( '/' + strPath + 'defendant/task-list/owe-all/pay-by-set-date')
+    } else {
+        res.redirect( '/' + strPath + 'defendant/task-list')
+
+    }
+
+  })
+
+  app.get(strPath + 'defendant/task-list', function (req, res) {
+    let how_much_paid_display = req.session.data.how_much_paid_display
+    if (how_much_paid_display =="displayed"){
+
+     res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant')
+    }
+
+    res.render( strPath + 'defendant/task-list')
+
+
+  })
+
   app.get('/postcode', function (req, res, next) {
-    res.render('partials/addresses', {
       addresses: mockAddressesFor(req.query.postcode)
-    })
   })
 
   const defaultState = () => {

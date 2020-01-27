@@ -21,18 +21,8 @@ Money Claims Prototype
         When do you want to pay?
         {% endif %}
       </h1>
-
-
-   <form
-     name="aspnetForm"
-     method="post"
-     onsubmit="multiNavigation('radio-pay-group', ['Immediately', 'Instalments', 'Set-date'], ['../task-list', '../task-list', 'owe-all/pay-by-set-date']);return false;"
-     id="aspnetForm"
-     autocomplete="off">
-
-
-
-
+      <!--JHS 270120 change radio redirect to use routes instead of multinavigation -->
+  <form action="/when-do-you-want-to-pay" method="post" novalidate>
       <div class="form-group">
         <fieldset>
           <div class="multiple-choice" data-target="immediately">
