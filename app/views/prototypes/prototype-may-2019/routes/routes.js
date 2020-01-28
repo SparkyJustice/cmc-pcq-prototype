@@ -14,6 +14,14 @@ module.exports = function(app){
   // add your routes here
 
   // JHS 240120 add PCQs call
+  app.post('/defendant-pcq-call', function (req, res, next) {
+  res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant')
+  })
+
+  app.post('/claimant-pcq-call', function (req, res, next) {
+    res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=claimant')
+  })
+
   app.post('/when-do-you-want-to-pay', function (req, res) {
     let whenPay = req.session.data['radio-pay-group']
 
@@ -26,18 +34,6 @@ module.exports = function(app){
         res.redirect( '/' + strPath + 'defendant/task-list')
 
     }
-
-  })
-
-  app.get(strPath + 'defendant/task-list', function (req, res) {
-    let how_much_paid_display = req.session.data.how_much_paid_display
-    if (how_much_paid_display =="displayed"){
-
-     res.redirect('https://hmcts-cmc-pcq-prototype.herokuapp.com/introduction?userType=defendant')
-    }
-
-    res.render( strPath + 'defendant/task-list')
-
 
   })
 
